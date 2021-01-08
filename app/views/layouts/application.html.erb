@@ -4,12 +4,24 @@
     <title>Hontomo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="navbar is-success">
+     <div class="navbar-brand">
+      <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4" style="font-family: cursive;">ほんとも</h1>
+        <% end %>
+     </div>
+     
+       </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+    </footer>
   </body>
 </html>
