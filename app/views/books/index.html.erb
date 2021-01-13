@@ -1,2 +1,20 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<div class="contents row">
+  <div class="container">
+      <%= @books.each do |book| %>
+        <div class="colum is-4">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-">
+                <%= image_tag book.image if book.image.attached? %>
+              </figure>
+            </div>
+            <div class="card-title">
+              <span><%= book.title %><br><%= book.author %></span>
+            </div>
+          </div>
+       </div>
+      <% end %>
+      <p><%= link_to "読んだ本を登録する", new_book_path %></p>
+    </div>
+  </div>
+</section>
